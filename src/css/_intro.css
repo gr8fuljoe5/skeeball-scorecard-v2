@@ -1,0 +1,26 @@
+.t7-intro {
+}
+
+.t7-intro--h2 {
+	font-size: 36px;
+}
+
+.t7-intro--h3 {
+	font-size: 24px;
+}
+
+.t7-intro--list {
+}
+
+.t7-intro--list__ul li {
+	list-style-type: disc;
+}
+
+.t7-intro--list__ul {
+	list-style-type: upper-roman;
+}
+
+.t7-intro--list__ul li,
+.t7-intro--list__ol li {
+	margin: 0 0 0 20px;
+}

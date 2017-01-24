@@ -1,0 +1,460 @@
+/*
+Form element "reset."
+============================================================
+*/
+
+/*
+  Don't make edits to this style block,
+  as it is simply intended to "undo" the
+  default look and feel. Instead, make
+  specific edits to "shared styles."
+*/
+
+.t7-form__button,
+.t7-form__input,
+.t7-form__select,
+.t7-form__textarea {
+
+  /* Undo Firefox defaults. */
+  -moz-appearance: none;  /* Undo WebKit defaults. */
+  -webkit-appearance: none;  /* Adjust background display. */
+  background: none;
+  background-clip: padding-box;
+  border: 0;
+  border-radius: 0;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.t7-form__input::ms-clear,
+.t7-form__input::ms-reveal,
+.t7-form__select::-ms-expand {
+  display: none;
+}
+
+.t7-form__input::-webkit-search-decoration {
+  display: none;
+}
+
+.t7-form__input::-webkit-outer-spin-button,
+.t7-form__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+/* For Firefox. */
+@-moz-document url-prefix("") {
+  .t7-form__button:invalid,
+  .t7-form__input:invalid,
+  .t7-form__select:invalid,
+  .t7-form__textarea:invalid {
+
+    /*
+      Suppress red glow that Firefox
+      adds to form fields by default,
+      even when user is still typing.
+    */
+    box-shadow: none;
+  }
+
+  .t7-form__button::-moz-focus-inner,
+  .t7-form__input::-moz-focus-inner,
+  .t7-form__select::-moz-focus-inner,
+  .t7-form__textarea::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+
+}
+
+.t7-form__input::-webkit-input-placeholder,
+.t7-form__textarea::-webkit-input-placeholder {
+  color: inherit;
+}
+
+.t7-form__input::-moz-placeholder,
+.t7-form__textarea::-moz-placeholder {
+  color: inherit;
+  opacity: 1;
+}
+
+.t7-form__input,
+.t7-form__select,
+.t7-form__textarea {
+  line-height: 1.5;
+}
+
+.t7-form__button[class] {
+  cursor: pointer;
+  display: inline-block;
+  font-weight: normal;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  width: auto;
+  white-space: nowrap;
+}
+
+/*
+Shared styles.
+============================================================
+*/
+.t7-form__input,
+.t7-form__select,
+.t7-form__textarea {
+  background-color: #fff;
+  border: 1px solid #999;/*  border-radius: 3px;*/
+  color: #000;
+  padding: 2px 5px;
+  width: 100%;
+}
+
+.t7-form__input,
+.t7-form__select {
+  display: inline-block;
+  height: var(--form-control-height);
+}
+
+.t7-form__input:not([disabled]):active,
+.t7-form__select:not([disabled]):active,
+.t7-form__textarea:not([disabled]):active,
+.t7-form__input:not([disabled]):focus,
+.t7-form__select:not([disabled]):focus,
+.t7-form__textarea:not([disabled]):focus {
+  border-color: #39f;
+  box-shadow: #39f 0 0 2px 0;
+}
+
+.t7-form__input--width-auto,
+.t7-form__select--width-auto {
+  width: auto;
+}
+
+br + .t7-form__input,
+br + .t7-form__select,
+br + .t7-form__textarea {
+  margin-top: 5px;
+}
+
+.aam-form__row > .aam-flex-box__column + .aam-flex-box__column,
+.aam-form__field + .aam-form__field,
+*[class*="t7-form__"] + .t7-form__button,
+*[class*="t7-form__"] + .t7-form__input,
+*[class*="t7-form__"] + .t7-form__select {
+  margin-left: var(--field-gutter);
+}
+
+.t7-form__input:read-only,
+.t7-form__input:disabled {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+/*
+Text area.
+============================================================
+*/
+.t7-form__textarea {
+  clear: both;
+  display: block;
+  min-height: 63px;
+}
+
+div.t7-form__textarea {
+  margin-bottom: 20px;
+}
+
+textarea.t7-form__textarea {
+  resize: vertical;
+}
+
+/*
+Select drop-down.
+============================================================
+*/
+
+/* For WebKit. */
+@media (-webkit-min-device-pixel-ratio:0) {
+  .t7-form__select,
+  .t7-form__select[size="0"],
+  .t7-form__select[size="1"] {
+    background-image: url("./t7-form__select.svg");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: auto 130%;
+    padding-right: 30px;
+  }
+
+}
+
+/* For Firefox. */
+@-moz-document url-prefix("") {
+  .t7-form__select,
+  .t7-form__select[size="0"],
+  .t7-form__select[size="1"] {
+    background-image: url("./t7-form__select.svg");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: auto 130%;
+    padding-left: 1px;
+    padding-right: 27px;
+  }
+
+}
+
+/*
+Button.
+============================================================
+*/
+.t7-form__button {
+  border-radius: 3px;
+  line-height: var(--form-control-height);
+  height: var(--form-control-height);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/*
+  Using `[class]` to override any inherited
+  styles if this is applied to a link `<a>`.
+*/
+.t7-form__button[class],
+.t7-form__button[class]:hover {
+  color: #fff;
+}
+
+.t7-form__button:not([disabled]):active {
+  position: relative;
+  top: 1px;
+}
+
+.t7-form__button:not([disabled]):focus {
+  box-shadow: #fff 0 0 0 1px, #39f 0 0 1px 2px;
+}
+
+/*
+Button sizes.
+============================================================
+*/
+.t7-form__button--small {
+  font-size: 11px;
+  line-height: 20px;
+  height: 20px;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+.t7-form__button--big {
+  font-size: 20px;
+  line-height: 35px;
+  height: 35px;
+}
+
+/*
+Button mode.
+============================================================
+*/
+.t7-form__button--default {
+  background: #888;
+}
+
+.t7-form__button--default:not([disabled]):active {
+  background: #555;
+}
+
+.t7-form__button--primary {
+  background: #69c;
+}
+
+.t7-form__button--primary:not([disabled]):active {
+  background: #369;
+}
+
+.t7-form__button--positive {
+  background: #693;
+}
+
+.t7-form__button--positive:not([disabled]):active {
+  background: #360;
+}
+
+.t7-form__button--negative {
+  background: #c66;
+}
+
+.t7-form__button--negative:not([disabled]):active {
+  background: #933;
+}
+
+.t7-form__button--warn {
+  background: #c96;
+}
+
+.t7-form__button--warn:not([disabled]):active {
+  background: #963;
+}
+
+/*
+Checkbox & Radio.
+============================================================
+*/
+.t7-form__radio,
+.t7-form__checkbox {
+  margin-left: 0;
+  margin-right: 10px;
+}
+
+ul[class*="t7-list-inline"] li + li .t7-form__radio,
+ul[class*="t7-list-inline"] li + li .t7-form__checkbox {
+  margin-left: 10px;
+}
+
+/*
+Disabled state.
+============================================================
+*/
+.t7-form__checkbox[disabled],
+.t7-form__radio[disabled],
+.t7-form__button[disabled],
+.t7-form__input[disabled],
+.t7-form__select[disabled],
+.t7-form__textarea[disabled] {
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.aam-form__label--checkbox,
+.aam-form__label--radio {
+  display: inline-block;
+  padding-left: 22px;
+  position: relative;
+}
+
+.aam-form__label--checkbox > .t7-form__checkbox,
+.aam-form__label--radio > .t7-form__radio {
+  display: inline-block;
+  padding-left: 22px;
+  position: absolute;
+  left: 0;
+}
+
+/*==================================
+=            Icon Input            =
+==================================*/
+.aam-icon-input {
+  display: flex;
+  margin-left: 10px;
+  color: var(--primary-color);
+}
+
+.aam-icon-input__icon {
+  height: var(--form-control-height);
+  display: flex;
+  align-items: center;
+  border: 1px solid #999;
+  border-right: none;
+  padding-left: 8px;
+  padding-right: 8px;
+  cursor: pointer;
+}
+
+.aam-icon-input.right {
+  flex-direction: row-reverse;
+}
+
+.aam-icon-input.right .aam-icon-input__icon {
+  border: 1px solid #999;
+  border-right: auto;
+  border-left: none;
+}
+
+/*=====  End of Icon Input  ======*/
+
+/*===================================
+=            Form format            =
+===================================*/
+
+.aam-form__no-margin {
+  margin-left: 0;
+}
+
+.aam-form__label {
+  font-size: var(--font-size-sm);
+  margin-bottom: 5px;
+}
+
+.aam-form__field {
+  margin-bottom: var(--gutter);
+}
+
+.aam-form__field--large label {
+  font-size: var(--font-size-xxl);
+}
+
+.aam-form__label--large {
+  font-size: var(--font-size-xl);
+}
+
+.aam-form__field__sub-header {
+  display: block;
+  margin-bottom: calc(var(--gutter) / 2);
+}
+
+.aam-form__section {
+  margin-left: var(--gutter);
+  margin-right: var(--gutter);
+  margin-bottom: var(--gutter);
+}
+
+.aam-form__section-offset {
+  margin-left: -var(--gutter);
+  margin-right: -var(--gutter);
+}
+
+.aam-divider--vertical {
+  border-left: solid 1px var(--border-color);
+}
+
+.aam-divider--horizonal {
+  border-bottom: solid 1px var(--border-color);
+  margin-bottom: var(--gutter);
+}
+
+.aam-form__list {
+  padding-left: 21px;
+}
+
+.aam-form__row--full {
+  width: 100%;
+}
+
+.aam-dialog-form_container {
+  margin-top: 30px;
+}
+
+.aam-form__indent {
+  margin-left: 20px;
+}
+
+.aam-form__indent .aam-form__list {
+  padding-left: 0;
+}
+
+/*=====  End of Form format  ======*/
+
+
+.error {
+  padding: 5px;
+  margin: 5px -5px;
+  border: dashed #c93b33 2px;
+}
+.inlineErrorText {
+  color: #c93b33;
+}

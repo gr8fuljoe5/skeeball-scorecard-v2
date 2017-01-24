@@ -1,0 +1,72 @@
+@import './_font';
+@import './_reset';
+@import './_variables';
+@import './_flex-box';
+@import './_text';
+@import './_icon';
+@import './_form';
+@import './_buttons';
+@import './_takes';
+@import './_intro';
+
+* {
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+body {
+  font-size: var(--font-size-sm);
+}
+
+ul {
+  margin-bottom: 8px;
+}
+
+@media (min-width:1200px) {
+  #app-shell {
+    padding-left: var(--nav-padding);
+    padding-right: var(--nav-padding);
+  }
+
+}
+
+/* STICKY FOOTER */
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#app-shell {
+  min-height: 100%;    /* equal to footer height */
+  margin-bottom: -var(--footer-height);
+}
+
+#app-shell:after {
+  content: "";
+  display: block;
+}
+
+.app-shell__footer,
+#app-shell:after {
+
+  /* .push must be the same height as footer */
+  height: var(--footer-height);
+}
+
+.aam-errors-list {
+  position: fixed;
+  bottom: 0;
+  right: 10px;
+  z-index: 1;
+  background-color: #c53447;
+  border: solid 1px #762637;
+  border-radius: 3px;
+  padding: 10px;
+  color: #FFF;
+}
+
+/* END STICKY FOOTER */

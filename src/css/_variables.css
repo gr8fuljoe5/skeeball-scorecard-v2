@@ -1,0 +1,28 @@
+:root {
+  --gutter: 16px;
+  --field-gutter: 10px;
+  --primary-color: #00746B;
+  --nav-text-color: #333;
+  --nav-padding: 40px;
+  --nav-item-padding: 25px;
+  --footer-height: 104px;
+  --border-color: #d6d6d6;
+  --gray: #666;
+  --font-size-sm: 12px;
+  --font-size: 14px;
+  --font-size-l: 16px;
+  --font-size-xl: 18px;
+  --font-size-xxl: 24px;
+  --font-size-huge: 30px;
+  --dark-gray: #333;
+  --tan: #C5B29A;
+  --light-green: #147f77;
+  --lightest-green: #f0f9f9;
+  --positive-green: #64B537;
+  --negative-color: #C00004;
+  --header-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.4);
+  --form-control-height: 30px;
+  --font-family: Avenir;
+  --tab-item-height: 54px;
+  --tab-item-arrow-size: 27px;
+}

@@ -1,0 +1,23 @@
+.aam-status-icon--agreed,
+.aam-status-icon--outstanding {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+
+.aam-status-icon--outstanding {
+  background-color: #FEC50A;
+}
+
+.aam-status-icon--agreed {
+  background-color: var(--positive-green);
+}
+
+.aam-icon--positive {
+  color: var(--positive-green);
+}
+
+.aam-icon--negative {
+  color: var(--negative-color);
+}

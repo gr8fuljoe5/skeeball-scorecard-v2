@@ -1,0 +1,128 @@
+/*==============================
+=            Button            =
+==============================*/
+[class*='aam-button--'] + [class*='aam-button--'] {
+  margin-left: var(--field-gutter);
+}
+
+.aam-accordion__button,
+.aam-action-menu__label,
+[class*='aam-button--'],
+.aam-action-menu__button {
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+}
+
+.aam-action-menu__label:focus,
+.aam-action-menu__button:focus,
+[class*='aam-button--']:focus,
+.aam-accordion__button:focus {
+  outline: none;
+}
+
+[class*='aam-button--'] {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: none;
+  height: var(--form-control-height);
+  padding: 0;
+}
+
+[class*='aam-button--'] > span:first-child,
+[class*='aam-button--'] > i:first-child {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+/* .aam-button--default should not have padding */
+.aam-button--special,
+.aam-button--primary,
+.aam-button--secondary {
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+.aam-button--secondary {
+  border: solid 1px var(--primary-color);
+}
+
+.aam-button--primary {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.aam-accordion__button {
+  color: var(--primary-color);
+  background-color: transparent;
+  border: none;
+  text-align: left;
+}
+
+.aam-button--disabled{
+  opacity:0.2;
+}
+
+
+/*=====  End of Button  ======*/
+
+/*===================================
+=            Action Menu            =
+===================================*/
+
+.aam-action-menu {
+  background-color: var(--primary-color);
+  color: #fff;
+  position: relative;
+}
+
+.aam-action-menu__label {
+  display: block;
+  font-size: var(--font-size-sm);
+  display: flex;
+  justify-content: space-between;
+}
+
+.aam-action-menu__button {
+  background-color: var(--primary-color);
+  border: none;
+  color: #fff;
+  border-top: solid 1px var(--light-green);
+  width: 100%;
+  text-align: left;
+}
+
+.aam-action-menu__button:hover {
+  background-color: var(--tan);
+}
+
+.aam-action-menu__button i {
+  margin-right: 5px;
+}
+
+.aam-action-menu__actions {
+  display: none;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.aam-action-menu__label:hover + .aam-action-menu__actions,
+.aam-action-menu__actions:hover {
+  display: block;
+}
+
+.aam-action-menu__label,
+.aam-action-menu__button {
+  padding: calc(var(--gutter) / 2) var(--gutter);
+}
+
+.aam-button--special {
+  background-color: var(--tan);
+  color: #fff;
+}
+
+/*=====  End of Action Menu  ======*/
+
+

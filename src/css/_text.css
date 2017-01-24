@@ -1,0 +1,67 @@
+h1,h2,h3,h4,h5,h6,
+.aam-heading-4,
+.aam-sub-heading,
+.aam-legal {
+  font-family: var(--font-family);
+}
+
+p {
+  margin-bottom: 8px;
+}
+
+.aam-sub-heading {
+  font-size: var(--font-size-sm);
+  color: var(--dark-gray);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.text-strong {
+  color: #000;
+  font-weight: 700;
+}
+
+.aam-page__heading {
+  font-size: var(--font-size-huge);
+  color: var(--gray);
+  font-weight: 400;
+}
+
+.aam-heading-2 {
+  font-size: var(--font-size-xl);
+  font-weight: 400;
+  margin-bottom: var(--gutter);
+}
+
+.aam-heading-4 {
+  font-size: var(--font-size-l);
+  font-weight: 400;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.aam-legal {
+  font-style: italic;
+  color: var(--dark-gray);
+  font-size: var(--font-size-sm);
+}
+
+summary {
+  cursor: pointer;
+}
+
+.pulsate {
+  background-color: #FFF;
+  -webkit-animation: pulsate 2s ease-out;
+  -webkit-animation-iteration-count: 1;
+}
+@-webkit-keyframes pulsate {
+  0% {
+    background-color: #ededbb;
+  }
+  100% {
+    background-color: #FFF;
+  }
+}

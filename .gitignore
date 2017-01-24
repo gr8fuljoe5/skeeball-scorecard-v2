@@ -1,9 +1,7 @@
-.DS_STORE
-*.log
 
+t7dev
 node_modules
-
+build
 dist
-coverage
-
-.idea/
+.idea
+npm-debug.log

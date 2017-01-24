@@ -1,0 +1,26 @@
+/**
+ *
+ * Avenir
+ *
+ */
+
+@font-face {
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Avenir Regular'), local('Avenir-Regular'), url('../static/fonts/Avenir/Avenir-Roman.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Avenir';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Avenir Oblique'), local('Avenir-Oblique'), url('../static/fonts/Avenir/Avenir-Oblique.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Avenir';
+  font-style: bold;
+  font-weight: 700;
+  src: local('Avenir Bold'), local('Avenir-Bold'), url('../static/fonts/Avenir Black/Avenir-85Heavy.woff') format('woff');
+}

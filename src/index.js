@@ -7,6 +7,7 @@ import { Router, Route, IndexRedirect, hashHistory } from 'react-router'
 
 import rootReducer from './reducers'
 import Intro from './pages/intro'
+import Scorecard  from './pages/scorecard'
 
 import './css/index.css'
 
@@ -37,6 +38,7 @@ ReactDOM.render(
     <Router history={hashHistory}>
       <Route path='/'>
         <IndexRedirect to="/intro" />
+        <Route path="/scorecard" component={Scorecard} />
         <Route path="/intro" component={Intro} />
         <Route path="*" component={Intro} />
       </Route>

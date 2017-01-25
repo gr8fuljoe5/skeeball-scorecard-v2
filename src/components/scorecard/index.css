@@ -1,0 +1,8 @@
+.sc-scorecard {
+    border: 1px solid #000066;
+}
+
+.sc-scorecard--th {
+    border: 1px solid black;
+    padding: 10px;
+}

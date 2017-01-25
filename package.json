@@ -1,7 +1,7 @@
 {
-  "name": "t7-coding-tests",
+  "name": "skeeball-scorecard-v2",
   "version": "1.0.0",
-  "description": "Front-end assets created by TandemSeven",
+  "description": "Skeeball Scorecard v2",
   "main": "index.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --progress -p --display-error-details --display-cached",

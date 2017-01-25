@@ -6,7 +6,7 @@ import { createStore, applyMiddleware } from 'redux'
 import { Router, Route, IndexRedirect, hashHistory } from 'react-router'
 
 import rootReducer from './reducers'
-import Intro from './pages/intro/intro'
+import Intro from './pages/intro'
 
 import './css/index.css'
 

@@ -173,7 +173,8 @@ class DropDown extends React.Component {
 
     // Populated in loop.
     const listItems = []
-
+    console.log(this.props)
+    alert('test')
     for (let i = 0; i < this.props.items.length; i++) {
       const item = this.props.items[i];
 
@@ -182,7 +183,7 @@ class DropDown extends React.Component {
           key={i}
           href={item.href}
           target={item.target}
-          text={item.tex}
+          text={item.text}
 
           handleClick={handleClick}
         />

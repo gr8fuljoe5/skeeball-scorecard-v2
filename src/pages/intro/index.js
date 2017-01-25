@@ -14,10 +14,7 @@ import * as TakesActions from '../../action_creators/take'
 import utils from '../../utils'
 
 import AppShell from '../../components/app_shell'
-import Button from '../../components/form_button'
-import Input from '../../components/form_input'
-import Radio from '../../components/form_radio'
-
+import CreateGameComponent from '../../components/create_game'
 
 
 class IntroPage extends Component {
@@ -29,6 +26,8 @@ class IntroPage extends Component {
     return (
       <AppShell>
         <h1>SKEEBALL SCORECARD</h1>
+        <h2>Welcome!</h2>
+        <CreateGameComponent/>
       </AppShell>
     )
   }

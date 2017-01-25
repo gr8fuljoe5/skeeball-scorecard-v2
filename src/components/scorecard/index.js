@@ -13,7 +13,7 @@ const Scorecard = (props) => {
 
   const inputRows = () => {
     return [...Array(10)].map((x, i) =>
-        <td>
+        <td className='sc-scorecard--td'>
           <Input/>
         </td>
     )

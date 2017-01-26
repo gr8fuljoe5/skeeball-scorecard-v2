@@ -18,19 +18,33 @@ class RollerCard extends React.Component {
 
   }
 
-  handleClick (e, text) {
-    /*
-     `e` is the event.
+  updateName (e, text) {
+    const target = e.target
+    const name = target.name
+    this.setState({
+      [name]: text
+    })
 
-     `text` is from the item clicked.
-     */
+  }
+
+  submitRollerName (e, text) {
+    console.log(this.state)
+    e.preventDefault()
+  }
+
+  clearInput () {
+
   }
 
   // Render method.
   render() {
+    const submitRollerName = this.submitRollerName
+    const clearInput = this.clearInput
+    const updateName = this.updateName
 
+    const cardNum = 'roller' + this.props.card
 
-
+    console.log(this.props)
 
     // Expose UI.
     return (
@@ -38,15 +52,15 @@ class RollerCard extends React.Component {
         <dl>
           <dt>Name</dt>
           <dd>
-            <Input/>
+            <Input handleChange={updateName} name={cardNum}/>
           </dd>
         </dl>
         <ul className='sc-roller-card--buttons'>
           <li className='sc-roller-card--buttons__item'>
-            <Button>Submit</Button>
+            <Button onClick={submitRollerName}>Submit</Button>
           </li>
           <li className='sc-roller-card--buttons__item'>
-            <Button>Clear</Button>
+            <Button type='clear' onClick={clearInput}>Clear</Button>
           </li>
         </ul>
       </section>

@@ -9,7 +9,7 @@ import {
 import {
   connect
 } from 'react-redux'
-import * as TakesActions from '../../action_creators/take'
+import * as CreateGameActions from '../../action_creators/create_game'
 
 import utils from '../../utils'
 
@@ -35,12 +35,12 @@ class IntroPage extends Component {
 
 const mapStateToProps = function(state) {
   return {
-    takes: state.takes
+    takes: state.game
   }
 }
 const mapDispatchToProps = function(dispatch) {
   return {
-    actions: bindActionCreators(TakesActions, dispatch)
+    actions: bindActionCreators(CreateGameActions, dispatch)
   }
 }
 

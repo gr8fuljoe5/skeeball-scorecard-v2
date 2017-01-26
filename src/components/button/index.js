@@ -5,7 +5,8 @@ const Button = (props) => {
   return (
     <button
       {...props}
-      className={`aam-button--${type || 'primary'} ${disabled ? 'aam-button--disabled' : ''}`} disabled={disabled}
+      className={`sc-button--${type || 'primary'} ${disabled ? 'sc-button--disabled' : ''}`}
+      disabled={disabled}
     >
       {props.children}
     </button>

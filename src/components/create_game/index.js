@@ -1,5 +1,10 @@
 // Dependencies.
-import React from 'react'
+import React, { Component, PropTypes } from 'react'
+import _ from 'lodash'
+
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+
 import utils from '../../utils'
 
 // CSS.
@@ -8,6 +13,8 @@ import './index.css'
 // UI Components
 import Select from '../form_select'
 import RollerCard from '../roller_card'
+
+import * as CreateGameActions from '../../action_creators/create_game'
 
 // Define class.
 class CreateGame extends React.Component {
@@ -25,6 +32,10 @@ class CreateGame extends React.Component {
     this.setState({
       rollers: parseInt(value)
     })
+  }
+
+  componentDidMount(){
+    console.log(this.props)
   }
 
   // Render method.
@@ -49,6 +60,9 @@ class CreateGame extends React.Component {
       }
     ]
 
+    const rollers = this.state.rollers
+
+    const saveRoller = this.props.actions.saveRoller
 
     // Expose UI.
     return (
@@ -61,8 +75,8 @@ class CreateGame extends React.Component {
          />
         <div>
           {
-            [...Array(this.state.rollers)].map((x, i) =>
-                <RollerCard/>
+            [...Array(rollers)].map((x, i) =>
+              <RollerCard card={i+1} save={saveRoller}/>
             )
           }
 
@@ -84,4 +98,19 @@ CreateGame.defaultProps = {
 }
 
 // Export.
-export default CreateGame
+const mapStateToProps = function(state) {
+  return {
+    takes: state.rollers
+  }
+}
+const mapDispatchToProps = function(dispatch) {
+  return {
+    actions: bindActionCreators(CreateGameActions, dispatch)
+  }
+}
+
+// Export.
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(CreateGame)

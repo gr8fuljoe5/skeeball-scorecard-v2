@@ -16,7 +16,6 @@ export function saveRollerSuccess(payload) {
 }
 
 export function saveRoller(rollers) {
-	console.log('saveRoller', rollers)
 	return (dispatch) => {
 		dispatch(saveRollerSuccess(rollers))
 	}

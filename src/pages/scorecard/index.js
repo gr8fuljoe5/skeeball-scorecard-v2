@@ -9,7 +9,7 @@ import {
 import {
   connect
 } from 'react-redux'
-import * as TakesActions from '../../action_creators/take'
+import * as TakesActions from '../../action_creators/create_game'
 
 import utils from '../../utils'
 

@@ -5,6 +5,7 @@ import _ from 'lodash'
 
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+import { browserHistory } from 'react-router'
 
 import utils from '../../utils'
 
@@ -33,8 +34,9 @@ class ButtonWell extends React.Component {
     users.forEach((user) => {
       userList.push(user.value)
     })
-    console.log(this.props.actions)
     this.props.actions.saveRoller(userList)
+    console.log(this.props)
+
   }
 
   clearInput () {

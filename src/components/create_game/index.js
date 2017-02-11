@@ -13,6 +13,7 @@ import './index.css'
 // UI Components
 import Select from '../form_select'
 import RollerCard from '../roller_card'
+import ButtonWell from '../roller_card/button_well'
 
 import * as CreateGameActions from '../../action_creators/create_game'
 
@@ -32,10 +33,15 @@ class CreateGame extends React.Component {
     this.setState({
       rollers: parseInt(value)
     })
+
+    const users = document.querySelectorAll('.sc-username')
+
+    console.log(users)
+
   }
 
   componentDidMount(){
-    console.log(this.props)
+
   }
 
   // Render method.
@@ -43,18 +49,22 @@ class CreateGame extends React.Component {
     const handleChange = this.handleChange
     const options = [
       {
+        key: 0,
         value: '0',
         name: 'Select...'
       },
       {
+        key: 1,
         value: '1',
         name: 'Uno'
       },
       {
+        key: 2,
         value: '2',
         name: 'Dos'
       },
       {
+        key: 3,
         value: '3',
         name: 'Tres'
       }
@@ -67,22 +77,22 @@ class CreateGame extends React.Component {
     // Expose UI.
     return (
       <section>
-
-        How many players?
-        <Select
-          options={options}
-          handleChange={handleChange}
-         />
-        <div>
-          {
-            [...Array(rollers)].map((x, i) =>
-              <RollerCard card={i+1} save={saveRoller}/>
-            )
-          }
-
-        </div>
+        <form ref='createCard' name='createCard'>
+          How many players?
+            <Select
+              options={options}
+              handleChange={handleChange}
+             />
+            <div>
+              {
+                [...Array(rollers)].map((x, i) =>
+                  <RollerCard card={i+1} save={saveRoller}/>
+                )
+              }
+              <ButtonWell/>
+            </div>
+        </form>
       </section>
-
     )
   }
 }

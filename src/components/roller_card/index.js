@@ -27,8 +27,7 @@ class RollerCard extends React.Component {
 
   }
 
-  submitRollerName (e, text) {
-    console.log(this.state)
+  submitRollerName (e, text) {  
     e.preventDefault()
   }
 
@@ -44,7 +43,6 @@ class RollerCard extends React.Component {
 
     const cardNum = 'roller' + this.props.card
 
-    console.log(this.props)
 
     // Expose UI.
     return (
@@ -52,17 +50,9 @@ class RollerCard extends React.Component {
         <dl>
           <dt>Name</dt>
           <dd>
-            <Input handleChange={updateName} name={cardNum}/>
+            <Input handleChange={updateName} name={cardNum} className='sc-username'/>
           </dd>
         </dl>
-        <ul className='sc-roller-card--buttons'>
-          <li className='sc-roller-card--buttons__item'>
-            <Button onClick={submitRollerName}>Submit</Button>
-          </li>
-          <li className='sc-roller-card--buttons__item'>
-            <Button type='clear' onClick={clearInput}>Clear</Button>
-          </li>
-        </ul>
       </section>
     )
   }

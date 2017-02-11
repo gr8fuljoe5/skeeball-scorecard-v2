@@ -15,8 +15,13 @@ export function saveRollerSuccess(payload) {
   }
 }
 
-export function saveRoller() {
-  return (dispatch) => {
-    dispatch(saveTakeSucess(json))
-  }
+export function saveRoller(rollers) {
+	console.log('saveRoller', rollers)
+	return (dispatch) => {
+		dispatch(saveRollerSuccess(rollers))
+	}
+}
+
+export function createGame() {
+
 }

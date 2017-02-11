@@ -82,7 +82,7 @@ class CreateGame extends React.Component {
             <div>
               {
                 [...Array(rollers)].map((x, i) =>
-                  <RollerCard card={i+1} save={saveRoller}/>
+                  <RollerCard card={i+1} save={saveRoller} key={i}/>
                 )
               }
               <ButtonWell/>

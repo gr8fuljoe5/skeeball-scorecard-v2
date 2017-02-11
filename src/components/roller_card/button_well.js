@@ -29,12 +29,12 @@ class ButtonWell extends React.Component {
   submitRollerName (e) {
     e.preventDefault()
     const users = document.querySelectorAll('.sc-username')
-
+    let userList = []
     users.forEach((user) => {
-      console.log(user.value)
+      userList.push(user.value)
     })
-
-
+    console.log(this.props.actions)
+    this.props.actions.saveRoller(userList)
   }
 
   clearInput () {

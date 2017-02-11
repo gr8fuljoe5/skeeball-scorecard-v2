@@ -34,10 +34,6 @@ class CreateGame extends React.Component {
       rollers: parseInt(value)
     })
 
-    const users = document.querySelectorAll('.sc-username')
-
-    console.log(users)
-
   }
 
   componentDidMount(){

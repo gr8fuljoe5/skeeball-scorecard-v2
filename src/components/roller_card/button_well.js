@@ -26,7 +26,14 @@ class ButtonWell extends React.Component {
     utils.bind(this)
   }
 
-  submitRollerName () {
+  submitRollerName (e) {
+    e.preventDefault()
+    const users = document.querySelectorAll('.sc-username')
+
+    users.forEach((user) => {
+      console.log(user.value)
+    })
+
 
   }
 

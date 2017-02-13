@@ -8,6 +8,7 @@ import './index.css'
 // UI Components
 import Input from '../form_input'
 import Button from '../button'
+import ButtonWell from './button_well'
 
 // Define class.
 class RollerCard extends React.Component {
@@ -53,6 +54,7 @@ class RollerCard extends React.Component {
             <Input handleChange={updateName} name={cardNum} className='sc-username'/>
           </dd>
         </dl>
+        <ButtonWell/>
       </section>
     )
   }

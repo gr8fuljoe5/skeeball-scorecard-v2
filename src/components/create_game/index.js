@@ -13,7 +13,6 @@ import './index.css'
 // UI Components
 import Select from '../form_select'
 import RollerCard from '../roller_card'
-import ButtonWell from '../roller_card/button_well'
 
 import * as CreateGameActions from '../../action_creators/create_game'
 
@@ -52,17 +51,17 @@ class CreateGame extends React.Component {
       {
         key: 1,
         value: '1',
-        name: 'Uno'
+        name: 'One'
       },
       {
         key: 2,
         value: '2',
-        name: 'Dos'
+        name: 'Two'
       },
       {
         key: 3,
         value: '3',
-        name: 'Tres'
+        name: 'Three'
       }
     ]
 
@@ -85,7 +84,6 @@ class CreateGame extends React.Component {
                   <RollerCard card={i+1} save={saveRoller} key={i}/>
                 )
               }
-              <ButtonWell/>
             </div>
         </form>
       </section>

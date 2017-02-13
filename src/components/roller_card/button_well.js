@@ -5,7 +5,7 @@ import _ from 'lodash'
 
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { browserHistory } from 'react-router'
+import { browserHistory, hashHistory } from 'react-router'
 
 import utils from '../../utils'
 
@@ -35,7 +35,7 @@ class ButtonWell extends React.Component {
       userList.push(user.value)
     })
     this.props.actions.saveRoller(userList)
-    console.log(this.props)
+    browserHistory.push('/scorecard')
 
   }
 
